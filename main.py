@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-author: Jiadi
+author: Jiadi Bao
 Date: 2022.12.4
 main function of agile BNP-HMM
 The purpose of these codes are for supporting the manuscript submission.
@@ -32,7 +32,6 @@ for i, x in enumerate(X):
     z_n = np.argmax(Z[i])
     plt.plot(i,x,"*-",c=bank[z_n])
 
-# kappa = 1
 model = agile_BNP_HMM(X, K=15, Z=Z, agile=True, kappa = 1)
 model.init_q_param()#initialize all q distributions
 model.HMM_fit()# model fitting
